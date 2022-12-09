@@ -28,7 +28,14 @@ parser.add_argument(
 
 def augment_of_dir(dir, pitch_change, tempo_change, velocity_change):
     target_dir = (
-        dir + "_pitch_" + str(pitch_change) + "_tempo_" + str(tempo_change) + "/"
+        dir
+        + "_pitch_"
+        + str(pitch_change)
+        + "_tempo_"
+        + str(tempo_change)
+        + "_velocity_"
+        + str(velocity_change)
+        + "/"
     )
     os.mkdir(target_dir)
     for file in os.listdir(dir):
