@@ -15,7 +15,7 @@ import csv
 
 #subset = input('subset: ')
 JSON_PATH = 'midi_label_map_apex_reg_cls.json'
-SUFFIX = '_data_raw_apex_reg_cls'
+SUFFIX = '_data_raw_apex_reg_cls_augmented'
 #JSON_PATH = 'midi_label_map_apex_reg_cls_rm_highstd.json'
 #SUFFIX = '_data_raw_apex_reg_cls_rm_highstd'
 #JSON_PATH = 'midi_label_map_apex_8_16.json'
