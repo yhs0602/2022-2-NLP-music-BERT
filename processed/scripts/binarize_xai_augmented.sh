@@ -20,6 +20,6 @@ i=0
 	    --validpref ${PREFIX}_data_raw_apex_reg_cls_augmented/$i/test.label \
 	    --destdir ${PREFIX}_data_bin_apex_reg_cls_augmented/$i/label \
 	    --workers 24
-	cp ${PREFIX}_data_raw_apex_reg_cls/$i/train.label ${PREFIX}_data_bin_apex_reg_cls_augmented/$i/label/train.label
-	cp ${PREFIX}_data_raw_apex_reg_cls/$i/test.label ${PREFIX}_data_bin_apex_reg_cls_augmented/$i/label/valid.label
+	cp ${PREFIX}_data_raw_apex_reg_cls_augmented/$i/train.label ${PREFIX}_data_bin_apex_reg_cls_augmented/$i/label/train.label
+	cp ${PREFIX}_data_raw_apex_reg_cls_augmented/$i/test.label ${PREFIX}_data_bin_apex_reg_cls_augmented/$i/label/valid.label
 echo "Done"
