@@ -14,7 +14,7 @@ from processed.map_midi_to_label import LABEL_LIST
 import argparse
 
 max_length = 8192 if 'disable_cp' not in os.environ else 1024
-batch_size = 4
+batch_size = 1
 n_folds = 1
 #LABEL_TO_REMOVE = ["Regular beat change", "Subtle change", "Sophisticated(mellow)", "balanced", "Harmonious", "Dominant(forceful)", "Imaginative"]
 LABEL_TO_REMOVE = ["Mechanical Tempo", "Intensional", "Regular beat change"]
@@ -57,6 +57,7 @@ for i in range(n_folds):
         user_dir='musicbert'
     )
     num_classes = 25 - 7
+    # num_clases = 13
     roberta.task.load_dataset('valid')
     dataset = roberta.task.datasets['valid']
     label_dict = roberta.task.label_dictionary
@@ -87,9 +88,9 @@ for i in range(n_folds):
         target = np.vstack(dataset[j]['target'].numpy() for j in range(
             i, i + batch_size) if j < len(dataset))
         target = torch.from_numpy(target)
-        target = target[:,:-1]
-        #target = F.one_hot(target.long(), num_classes=(num_classes + 4))
-        #target = target.sum(dim=1)[:, 4:]
+        
+        target = target[:,-1].to(torch.int64)   # target pianist no. (0-13)
+        
         source = np.vstack(tuple(padded(dataset[j]['source'].numpy()) for j in range(
             i, i + batch_size) if j < len(dataset)))
         source = torch.from_numpy(source)
@@ -111,28 +112,24 @@ for i in range(n_folds):
 
     y_true = np.vstack(y_true)
     y_pred = np.vstack(y_pred)
+    
+    y_true = y_true.flatten()   # (80, 1) to (80)
 
-    print()
-    # for i in range(num_classes):
-    #     print(i, label_fn(i, label_dict))
-    print(y_true.shape)
-    print(y_pred.shape)
-    print(label_list)
-    print()
+    print(f"test accuracy: {np.sum(y_true == np.argmax(y_pred, axis=1)) / y_true.shape[0] * 100}%")
+    
+    # assert len(label_list) == y_pred.shape[1]
 
-    assert len(label_list) == y_pred.shape[1]
-
-    for score in ["R2"]:
-        result = r2_score(y_true, y_pred)
-        #result = r2_score(y_true.reshape(-1), y_pred.reshape(-1))
-        scores [score + "_total"] = result
-        for i, label_name in enumerate(label_list):
-            scores[score + "_" + label_name] = r2_score(y_true[:,i], y_pred[:,i])
+    # for score in ["R2"]:
+    #     result = r2_score(y_true, y_pred)
+    #     #result = r2_score(y_true.reshape(-1), y_pred.reshape(-1))
+    #     scores [score + "_total"] = result
+    #     for i, label_name in enumerate(label_list):
+    #         scores[score + "_" + label_name] = r2_score(y_true[:,i], y_pred[:,i])
         
-        print("{}:".format(score), result)
+    #     print("{}:".format(score), result)
         
 
-print(scores)
+# print(scores)
 
-for k in scores.keys():
-    print(f"{'_'.join(k.split(' '))}, {scores[k]}")
+# for k in scores.keys():
+#     print(f"{'_'.join(k.split(' '))}, {scores[k]}")
