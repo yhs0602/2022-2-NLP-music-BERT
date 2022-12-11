@@ -352,3 +352,4 @@ poetry.toml
 
 Data
 checkpoints
+processed/segmented_midi
