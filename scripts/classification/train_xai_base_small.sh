@@ -20,7 +20,7 @@ subset=xai
 UPDATE_FREQ=$((${BATCH_SIZE} / ${MAX_SENTENCES} / 1))
 HEAD_NAME=xai_head
 
-SIZES=("base")
+SIZES=("small")
 for size in "${SIZES[@]}"
 do
     
@@ -29,7 +29,7 @@ do
     for lr in "${PEAK_LRS[@]}"
         do
         CHECKPOINT_SUFFIX=xai_apex_M2P_${lr}_${size}_tmp.pt
-        fairseq-train processed/xai_data_bin_apex_reg_cls/0 --user-dir musicbert \
+        fairseq-train processed/xai_data_bin_apex_reg_cls/0 --fp16 --user-dir musicbert \
             --restore-file $MUSICBERT_PATH \
             --max-update $TOTAL_NUM_UPDATES \
             --batch-size $MAX_SENTENCES --update-freq $UPDATE_FREQ \
@@ -49,7 +49,7 @@ do
             --optimizer adam --adam-betas "(0.9, 0.98)" --adam-eps 1e-6 --clip-norm 0.0 \
             --lr-scheduler polynomial_decay --lr $lr --total-num-update $TOTAL_NUM_UPDATES --warmup-updates $WARMUP_UPDATES \
             --log-format json --log-interval 100 \
-            --tensorboard-logdir checkpoints/board_apex_M2P_${lr}_${size}_tmp \
+            --tensorboard-logdir ./experiments/checkpoints/M2P/board_apex_${lr}_${size} \
             --best-checkpoint-metric accuracy \
             --shorten-method "truncate" \
             --checkpoint-suffix _${CHECKPOINT_SUFFIX} \
