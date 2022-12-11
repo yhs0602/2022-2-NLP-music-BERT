@@ -27,7 +27,7 @@ if os.path.exists(raw_data_dir):
         print('Output path {} already exists!'.format(raw_data_dir))
         sys.exit(0)
 #data_path = input('xai dataset zip path: ')
-data_path = "segmented_midi.zip"
+data_path = "augmented_segmented_midi.zip"
 n_folds = 5
 n_times = 1  # sample train set multiple times
 #max_length = int(input('sequence length: '))
