@@ -1,4 +1,4 @@
-export CUDA_VISIBLE_DEVICES=3
+export CUDA_VISIBLE_DEVICES=0
 lrs=(1e-3 1e-4 1e-5 1e-6)
 n_layers=(3 4 5)
 bsz=(16 32)
