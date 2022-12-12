@@ -44,8 +44,8 @@ export CUDA_VISIBLE_DEVICES=0
 # python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2P_1e-5_small_tmp.pt.pt  --data_dir processed/xai_data_bin_apex_reg_cls/0
 # python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2P_1e-6_small_tmp.pt.pt  --data_dir processed/xai_data_bin_apex_reg_cls/0
 
-python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2P_1e-4_small_tmp.pt.pt  --data_dir processed/xai_data_bin_apex_reg_cls/0
-python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2P_1e-5_small_tmp.pt.pt  --data_dir processed/xai_data_bin_apex_reg_cls/0
-python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2P_1e-6_small_tmp.pt.pt  --data_dir processed/xai_data_bin_apex_reg_cls/0
+python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2P_1e-4_small_tmp.pt.pt  --data_dir processed/xai_data_bin_apex_reg_cls_augmented/0
+python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2P_1e-5_small_tmp.pt.pt  --data_dir processed/xai_data_bin_apex_reg_cls_augmented/0
+python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2P_1e-6_small_tmp.pt.pt  --data_dir processed/xai_data_bin_apex_reg_cls_augmented/0
 # python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_last_musicbert_small.pt  --data_dir processed/xai_data_bin_apex_reg_cls/0
-python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2P_1e-7_small_tmp.pt.pt  --data_dir processed/xai_data_bin_apex_reg_cls/0
+python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2P_1e-7_small_tmp.pt.pt  --data_dir processed/xai_data_bin_apex_reg_cls_augmented/0

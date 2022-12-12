@@ -38,7 +38,7 @@ def get_args():
     parser.add_argument('--task', choices=["xai_M2PF", "xai_M2PFnP", "xai_M2P"], required=True)
     parser.add_argument('--head_name', type = str, required=True)
     parser.add_argument('--checkpoint_file', type=str, default='')
-    parser.add_argument('--data_dir', type=str, default='xai_data_bin_apex_reg_cls/0')
+    parser.add_argument('--data_dir', type=str, default='xai_data_bin_apex_reg_cls_augmented/0')
     args = parser.parse_args()
     return args
 
