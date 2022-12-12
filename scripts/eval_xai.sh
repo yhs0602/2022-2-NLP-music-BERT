@@ -1,5 +1,5 @@
 export PYTHONPATH=`pwd`
-export CUDA_VISIBLE_DEVICES=2
+export CUDA_VISIBLE_DEVICES=0
 #python eval_xai.py --task xai_M2PFnP --head_name xai_M2PFnP_res --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2PFnP_base_1e-5.pt.pt  --data_dir xai_data_bin_apex_reg_cls/0
 
 #python eval_xai.py --task xai_M2PF --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2PF_0.00001_base_adv.pt.pt --data_dir xai_data_bin_apex_reg_cls/0
@@ -37,5 +37,15 @@ export CUDA_VISIBLE_DEVICES=2
 # python eval_xai.py --task xai_M2PF --head_name xai_head --checkpoint_file checkpoints_8_16_match/checkpoint_best_xai_apex_M2PF_0.00001_base_8.pt.pt --data_dir processed/subset_8_16/xai_data_bin_apex_8bars/0
 # python eval_xai.py --task xai_M2PF --head_name xai_head --checkpoint_file checkpoints_8_16_match/checkpoint_best_xai_apex_M2PF_0.000001_base_8.pt.pt --data_dir processed/subset_8_16/xai_data_bin_apex_8bars/0
 
-python eval_xai.py --task xai_M2PF --head_name xai_head --checkpoint_file checkpoints_8bars/checkpoint_best_xai_apex_M2PF_0.0001_base_8.pt.pt --data_dir processed/xai_data_bin_apex_reg_cls_8bars/0
-python eval_xai.py --task xai_M2PF --head_name xai_head --checkpoint_file checkpoints_8bars/checkpoint_best_xai_apex_M2PF_0.00001_base_8.pt.pt --data_dir processed/xai_data_bin_apex_reg_cls_8bars/0
+# python eval_xai.py --task xai_M2PF --head_name xai_head --checkpoint_file checkpoints_8bars/checkpoint_best_xai_apex_M2PF_0.0001_base_8.pt.pt --data_dir processed/xai_data_bin_apex_reg_cls_8bars/0
+# python eval_xai.py --task xai_M2PF --head_name xai_head --checkpoint_file checkpoints_8bars/checkpoint_best_xai_apex_M2PF_0.00001_base_8.pt.pt --data_dir processed/xai_data_bin_apex_reg_cls_8bars/0
+
+# python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2P_1e-4_small_tmp.pt.pt  --data_dir processed/xai_data_bin_apex_reg_cls/0
+# python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2P_1e-5_small_tmp.pt.pt  --data_dir processed/xai_data_bin_apex_reg_cls/0
+# python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2P_1e-6_small_tmp.pt.pt  --data_dir processed/xai_data_bin_apex_reg_cls/0
+
+python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2P_1e-4_small_tmp.pt.pt  --data_dir processed/xai_data_bin_apex_reg_cls_augmented/0
+python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2P_1e-5_small_tmp.pt.pt  --data_dir processed/xai_data_bin_apex_reg_cls_augmented/0
+python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2P_1e-6_small_tmp.pt.pt  --data_dir processed/xai_data_bin_apex_reg_cls_augmented/0
+# python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_last_musicbert_small.pt  --data_dir processed/xai_data_bin_apex_reg_cls/0
+python eval_xai.py --task xai_M2P --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2P_1e-7_small_tmp.pt.pt  --data_dir processed/xai_data_bin_apex_reg_cls_augmented/0
