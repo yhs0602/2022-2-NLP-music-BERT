@@ -20,7 +20,7 @@ subset=xai
 UPDATE_FREQ=$((${BATCH_SIZE} / ${MAX_SENTENCES} / 1))
 HEAD_NAME=xai_head
 
-SIZES=("base")
+SIZES=("small")
 for size in "${SIZES[@]}"
 do
     
