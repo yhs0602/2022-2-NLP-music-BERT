@@ -2,7 +2,7 @@
 
 Author: 강성현, 양현서, Richard Novenius
 
-## Fine Tuning while Freezing Bottom Encoder Layers
+## [Fine Tuning while Freezing Bottom Encoder Layers](https://github.com/KYHSGeekCode/2022-2-NLP-music-BERT/pull/4)
 ```
 branch: ludrex
 ```
@@ -22,7 +22,7 @@ bash scripts/classification/train_xai_base_small.sh
 bash scripts/eval_xai.sh
 ```
 
-## Data Augmentation
+## [Data Augmentation](https://github.com/KYHSGeekCode/2022-2-NLP-music-BERT/pull/2)
 ```
 branch: attempt/augmentation
 ```
