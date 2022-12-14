@@ -178,9 +178,9 @@ class MusicBERTSentencePredictionMultilabelTaskXAI(SentencePredictionTask):
         """
         # freeze_up_to = 3
         # for name, param in list(model.named_parameters()):
-            # for i in range(freeze_up_to + 1):
-            #     if f"layers.{i}." in name:
-            #         param.requires_grad = False
+        #     for i in range(freeze_up_to + 1):
+        #         if f"layers.{i}." in name:
+        #             param.requires_grad = False
 
         model.register_classification_head(
             getattr(args, "classification_head_name", "sentence_classification_head"),
