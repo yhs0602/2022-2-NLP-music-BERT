@@ -36,6 +36,7 @@ python augmentation.py ../processed/segmented_midi/ --pitch_range=-6_12_1 --temp
 - Generated tempo = 60, 120, 180
 - Generated velocity = 50, 90
 - Generated file name example = `{original_filename}_{pitch}_-12_{tempo}_120_{velocity}_90.mid`
+- Run `python generate_total_csv.py segmented_midi/_augmented/` to generate new `total.csv`
 - Then run modified `python map_midi_to_label.py` to generate `midi_label_map_apex_reg_cls.json` file.
 - Then run modified `python -u gen_xai.py xai` to generate `xai_data_raw_apex_reg_cls_augmented` folder.
 - Then run modified `bash scripts/binarize_xai.sh xai` to generate `xai_data_bin_apex_reg_cls_augmented` folder.
