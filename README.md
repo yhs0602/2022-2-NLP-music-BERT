@@ -2,22 +2,25 @@
 
 Author: 강성현, 양현서, Richard Novenius
 
-## Fine Tuning
+## Fine Tuning while Freezing Bottom Encoder Layers
 ```
 branch: ludrex
 ```
-- method:
+- In `musicbert/__init__.py`, modify the `build_model` method of class `MusicBERTSentencePredictionMultilabelTaskXAI`(line 166), following the instruction given in the comment.
+- You may either 
+1. freeze no parameters(default),
+2. freeze all parameters in the encoder and only update classifier parameters, or
+3. freeze parameters from layer-0 up to layer-$k$, where $$0\le k\le \text{(\# of encoder layers)}-1.$$ MusicBERT base and small models have 12 and 4 encoder layers, respectively. 
+
+- To fine-tune,
 ```shell
-blah 
+bash scripts/classification/train_xai_base_small.sh
 ```
-- Generated pitch = -6, -5, -4, -3, ..., +12
-- Generated tempo = 60, 120, 180
-- Generated velocity = 50, 90
-- Generated file name example = `{original_filename}_{pitch}_-12_{tempo}_120_{velocity}_90.mid`
-- Then run modified `python map_midi_to_label.py` to generate `midi_label_map_apex_reg_cls.json` file.
-- Then run modified `python -u gen_xai.py xai` to generate `xai_data_raw_apex_reg_cls_augmented` folder.
-- Then run modified `bash scripts/binarize_xai.sh xai` to generate `xai_data_bin_apex_reg_cls_augmented` folder.
-- Then run modified `scripts/train_xai_base_small.sh` to train the model. 
+
+- To evaluate fine-tuned models and get test accuracy,
+```shell
+bash scripts/eval_xai.sh
+```
 
 ## Data Augmentation
 ```
