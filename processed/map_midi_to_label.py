@@ -11,7 +11,7 @@ LABEL_LIST = ["Stable beat", "Mechanical Tempo", "Intensional", "Regular beat ch
 LABEL_MAP = {i: label for i, label in enumerate(LABEL_LIST)}
 PIANIST_MAP = OrderedDict()
 
-file = open('./total.csv', encoding="utf-8")
+file = open('processed/total_augmented.csv', encoding="utf-8")
 #file = open('total.csv', encoding="utf-8")
 
 def estimate_maxima(data):
@@ -79,12 +79,12 @@ def midi_label_map_apex_remove_bad():
 
     # add pianist info
     for key, annot_list in tqdm(music_label_map_apex.items()):
-        if key.split("_")[-2] not in PIANIST_MAP:
-            PIANIST_MAP[key.split("_")[-2]] = len(PIANIST_MAP)
+        if key.split('_pitch_')[0].split("_")[-2] not in PIANIST_MAP:
+            PIANIST_MAP[key.split('_pitch_')[0].split("_")[-2]] = len(PIANIST_MAP)
     print(PIANIST_MAP)
     
     for key, annot_list in tqdm(music_label_map_apex.items()):
-        music_label_map_apex[key].append(PIANIST_MAP[key.split("_")[-2]])
+        music_label_map_apex[key].append(PIANIST_MAP[key.split('_pitch_')[0].split("_")[-2]])
 
     json.dump(music_label_map_apex, open("midi_label_map_apex_rm_bad.json", 'w'))
 
@@ -127,12 +127,12 @@ def midi_label_map_apex():
 
     # add pianist info
     for key, annot_list in tqdm(music_label_map_apex.items()):
-        if key.split("_")[-2] not in PIANIST_MAP:
-            PIANIST_MAP[key.split("_")[-2]] = len(PIANIST_MAP)
+        if key.split('_pitch_')[0].split("_")[-2] not in PIANIST_MAP:
+            PIANIST_MAP[key.split('_pitch_')[0].split("_")[-2]] = len(PIANIST_MAP)
     print(PIANIST_MAP)
     
     for key, annot_list in tqdm(music_label_map_apex.items()):
-        music_label_map_apex[key].append(PIANIST_MAP[key.split("_")[-2]])
+        music_label_map_apex[key].append(PIANIST_MAP[key.split('_pitch_')[0].split("_")[-2]])
 
     json.dump(music_label_map_apex, open("midi_label_map_apex_reg_cls.json", 'w'))
     

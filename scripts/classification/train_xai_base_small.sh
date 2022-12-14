@@ -20,7 +20,7 @@ subset=xai
 UPDATE_FREQ=$((${BATCH_SIZE} / ${MAX_SENTENCES} / 1))
 HEAD_NAME=xai_head
 
-SIZES=("base")
+SIZES=("small")
 for size in "${SIZES[@]}"
 do
     
@@ -29,7 +29,7 @@ do
     for lr in "${PEAK_LRS[@]}"
         do
         CHECKPOINT_SUFFIX=xai_apex_M2P_${lr}_${size}_tmp.pt
-        fairseq-train processed/xai_data_bin_apex_reg_cls/0 --user-dir musicbert \
+        fairseq-train processed/xai_data_bin_apex_reg_cls_augmented/0 --user-dir musicbert \
             --restore-file $MUSICBERT_PATH \
             --max-update $TOTAL_NUM_UPDATES \
             --batch-size $MAX_SENTENCES --update-freq $UPDATE_FREQ \

@@ -1,0 +1,66 @@
+len labels:  25
+=========================================================================
+loading model and data
+start evaluating fold 0
+disable_cp = False
+mask_strategy = ['bar']
+convert_encoding = OCTMIDI
+crop_length = None
+dataset: 80
+labels: 80
+Namespace(checkpoint_file='checkpoints/checkpoint_best_xai_apex_M2P_1e-4_small_tmp.pt.pt', data_dir='processed/xai_data_bin_apex_reg_cls/0', head_name='xai_head', task='xai_M2P')
+eval_xai.py:89: FutureWarning: arrays to stack must be passed as a "sequence" type such as list or tuple. Support for non-sequence iterables such as generators is deprecated as of NumPy 1.16 and will raise an error in the future.
+  i, i + batch_size) if j < len(dataset))
+test accuracy: 100.0%
+['Stable beat', 'Long', 'Cushioned', 'Saturated (wet)', 'Clean', 'Subtle change', 'Even', 'Rich', 'Bright', 'Pure', 'Soft', 'Sophisticated(mellow)', 'balanced', 'Large range of dynamic', 'Fast paced', 'Flowing', 'Swing(Flexible)', 'Flat', 'Harmonious', 'Optimistic(pleasant)', 'HIgh Energy', 'Dominant(forceful)', 'Imaginative', 'Ethereal', 'Convincing']
+
+len labels:  25
+=========================================================================
+loading model and data
+start evaluating fold 0
+disable_cp = False
+mask_strategy = ['bar']
+convert_encoding = OCTMIDI
+crop_length = None
+dataset: 80
+labels: 80
+Namespace(checkpoint_file='checkpoints/checkpoint_best_xai_apex_M2P_1e-5_small_tmp.pt.pt', data_dir='processed/xai_data_bin_apex_reg_cls/0', head_name='xai_head', task='xai_M2P')
+eval_xai.py:89: FutureWarning: arrays to stack must be passed as a "sequence" type such as list or tuple. Support for non-sequence iterables such as generators is deprecated as of NumPy 1.16 and will raise an error in the future.
+  i, i + batch_size) if j < len(dataset))
+test accuracy: 71.25%
+['Stable beat', 'Long', 'Cushioned', 'Saturated (wet)', 'Clean', 'Subtle change', 'Even', 'Rich', 'Bright', 'Pure', 'Soft', 'Sophisticated(mellow)', 'balanced', 'Large range of dynamic', 'Fast paced', 'Flowing', 'Swing(Flexible)', 'Flat', 'Harmonious', 'Optimistic(pleasant)', 'HIgh Energy', 'Dominant(forceful)', 'Imaginative', 'Ethereal', 'Convincing']
+
+len labels:  25
+=========================================================================
+loading model and data
+start evaluating fold 0
+disable_cp = False
+mask_strategy = ['bar']
+convert_encoding = OCTMIDI
+crop_length = None
+dataset: 80
+labels: 80
+Namespace(checkpoint_file='checkpoints/checkpoint_best_xai_apex_M2P_1e-6_small_tmp.pt.pt', data_dir='processed/xai_data_bin_apex_reg_cls/0', head_name='xai_head', task='xai_M2P')
+eval_xai.py:89: FutureWarning: arrays to stack must be passed as a "sequence" type such as list or tuple. Support for non-sequence iterables such as generators is deprecated as of NumPy 1.16 and will raise an error in the future.
+  i, i + batch_size) if j < len(dataset))
+test accuracy: 32.5%
+['Stable beat', 'Long', 'Cushioned', 'Saturated (wet)', 'Clean', 'Subtle change', 'Even', 'Rich', 'Bright', 'Pure', 'Soft', 'Sophisticated(mellow)', 'balanced', 'Large range of dynamic', 'Fast paced', 'Flowing', 'Swing(Flexible)', 'Flat', 'Harmonious', 'Optimistic(pleasant)', 'HIgh Energy', 'Dominant(forceful)', 'Imaginative', 'Ethereal', 'Convincing']
+
+len labels:  25
+=========================================================================
+loading model and data
+start evaluating fold 0
+disable_cp = False
+mask_strategy = ['bar']
+convert_encoding = OCTMIDI
+crop_length = None
+Traceback (most recent call last):
+  File "eval_xai.py", line 57, in <module>
+    user_dir='musicbert'
+  File "/csehome/kygc/.conda/envs/music_xai/lib/python3.7/site-packages/fairseq/models/roberta/model.py", line 251, in from_pretrained
+    **kwargs,
+  File "/csehome/kygc/.conda/envs/music_xai/lib/python3.7/site-packages/fairseq/hub_utils.py", line 75, in from_pretrained
+    arg_overrides=kwargs,
+  File "/csehome/kygc/.conda/envs/music_xai/lib/python3.7/site-packages/fairseq/checkpoint_utils.py", line 337, in load_model_ensemble_and_task
+    raise IOError("Model file not found: {}".format(filename))
+OSError: Model file not found: ./checkpoints/checkpoint_best_xai_apex_M2P_1e-7_small_tmp.pt.pt

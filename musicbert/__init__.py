@@ -126,6 +126,8 @@ class MusicBERTSentencePredictionMultilabelTaskXAI(SentencePredictionTask):
                 labels.append(label)
                 label_lengths.append(len(label))
                 #assert len(label) == self.args.num_reg_classes + 1, print(len(label), self.args.num_reg_classes)
+        print('dataset:',len(src_dataset))
+        print('labels:', len(labels))
         assert len(src_dataset) == len(labels)
         self.datasets[split] = LanguagePairDataset(
             src=src_dataset,

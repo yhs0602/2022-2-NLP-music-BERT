@@ -1,0 +1,50 @@
+len labels:  25
+=========================================================================
+loading model and data
+start evaluating fold 0
+disable_cp = False
+mask_strategy = ['bar']
+convert_encoding = OCTMIDI
+crop_length = None
+dataset: 80
+labels: 80
+Namespace(checkpoint_file='checkpoints/checkpoint_best_xai_apex_M2P_1e-4_small_tmp.pt.pt', data_dir='processed/xai_data_bin_apex_reg_cls/0', head_name='xai_head', task='xai_M2P')
+evaluating: 0.00%evaluating: 1.25%evaluating: 2.50%evaluating: 3.75%evaluating: 5.00%evaluating: 6.25%evaluating: 7.50%evaluating: 8.75%evaluating: 10.00%evaluating: 11.25%evaluating: 12.50%evaluating: 13.75%evaluating: 15.00%evaluating: 16.25%evaluating: 17.50%evaluating: 18.75%evaluating: 20.00%evaluating: 21.25%evaluating: 22.50%evaluating: 23.75%evaluating: 25.00%evaluating: 26.25%evaluating: 27.50%evaluating: 28.75%evaluating: 30.00%evaluating: 31.25%evaluating: 32.50%evaluating: 33.75%evaluating: 35.00%evaluating: 36.25%evaluating: 37.50%evaluating: 38.75%evaluating: 40.00%evaluating: 41.25%evaluating: 42.50%evaluating: 43.75%evaluating: 45.00%evaluating: 46.25%evaluating: 47.50%evaluating: 48.75%evaluating: 50.00%evaluating: 51.25%evaluating: 52.50%evaluating: 53.75%evaluating: 55.00%evaluating: 56.25%evaluating: 57.50%evaluating: 58.75%evaluating: 60.00%evaluating: 61.25%evaluating: 62.50%evaluating: 63.75%evaluating: 65.00%evaluating: 66.25%evaluating: 67.50%evaluating: 68.75%evaluating: 70.00%evaluating: 71.25%evaluating: 72.50%evaluating: 73.75%evaluating: 75.00%evaluating: 76.25%evaluating: 77.50%evaluating: 78.75%evaluating: 80.00%evaluating: 81.25%evaluating: 82.50%evaluating: 83.75%evaluating: 85.00%evaluating: 86.25%evaluating: 87.50%evaluating: 88.75%evaluating: 90.00%evaluating: 91.25%evaluating: 92.50%evaluating: 93.75%evaluating: 95.00%evaluating: 96.25%evaluating: 97.50%evaluating: 98.75%test accuracy: 70.0%
+['Stable beat', 'Long', 'Cushioned', 'Saturated (wet)', 'Clean', 'Subtle change', 'Even', 'Rich', 'Bright', 'Pure', 'Soft', 'Sophisticated(mellow)', 'balanced', 'Large range of dynamic', 'Fast paced', 'Flowing', 'Swing(Flexible)', 'Flat', 'Harmonious', 'Optimistic(pleasant)', 'HIgh Energy', 'Dominant(forceful)', 'Imaginative', 'Ethereal', 'Convincing']
+
+len labels:  25
+=========================================================================
+loading model and data
+start evaluating fold 0
+disable_cp = False
+mask_strategy = ['bar']
+convert_encoding = OCTMIDI
+crop_length = None
+dataset: 80
+labels: 80
+Namespace(checkpoint_file='checkpoints/checkpoint_best_xai_apex_M2P_1e-5_small_tmp.pt.pt', data_dir='processed/xai_data_bin_apex_reg_cls/0', head_name='xai_head', task='xai_M2P')
+evaluating: 0.00%evaluating: 1.25%evaluating: 2.50%evaluating: 3.75%evaluating: 5.00%evaluating: 6.25%evaluating: 7.50%evaluating: 8.75%evaluating: 10.00%evaluating: 11.25%evaluating: 12.50%evaluating: 13.75%evaluating: 15.00%evaluating: 16.25%evaluating: 17.50%evaluating: 18.75%evaluating: 20.00%evaluating: 21.25%evaluating: 22.50%evaluating: 23.75%evaluating: 25.00%evaluating: 26.25%evaluating: 27.50%evaluating: 28.75%evaluating: 30.00%evaluating: 31.25%evaluating: 32.50%evaluating: 33.75%evaluating: 35.00%evaluating: 36.25%evaluating: 37.50%evaluating: 38.75%evaluating: 40.00%evaluating: 41.25%evaluating: 42.50%evaluating: 43.75%evaluating: 45.00%evaluating: 46.25%evaluating: 47.50%evaluating: 48.75%evaluating: 50.00%evaluating: 51.25%evaluating: 52.50%evaluating: 53.75%evaluating: 55.00%evaluating: 56.25%evaluating: 57.50%evaluating: 58.75%evaluating: 60.00%evaluating: 61.25%evaluating: 62.50%evaluating: 63.75%evaluating: 65.00%evaluating: 66.25%evaluating: 67.50%evaluating: 68.75%evaluating: 70.00%evaluating: 71.25%evaluating: 72.50%evaluating: 73.75%evaluating: 75.00%evaluating: 76.25%evaluating: 77.50%evaluating: 78.75%evaluating: 80.00%evaluating: 81.25%evaluating: 82.50%evaluating: 83.75%evaluating: 85.00%evaluating: 86.25%evaluating: 87.50%evaluating: 88.75%evaluating: 90.00%evaluating: 91.25%evaluating: 92.50%evaluating: 93.75%evaluating: 95.00%evaluating: 96.25%evaluating: 97.50%evaluating: 98.75%test accuracy: 36.25%
+['Stable beat', 'Long', 'Cushioned', 'Saturated (wet)', 'Clean', 'Subtle change', 'Even', 'Rich', 'Bright', 'Pure', 'Soft', 'Sophisticated(mellow)', 'balanced', 'Large range of dynamic', 'Fast paced', 'Flowing', 'Swing(Flexible)', 'Flat', 'Harmonious', 'Optimistic(pleasant)', 'HIgh Energy', 'Dominant(forceful)', 'Imaginative', 'Ethereal', 'Convincing']
+
+len labels:  25
+=========================================================================
+loading model and data
+start evaluating fold 0
+disable_cp = False
+mask_strategy = ['bar']
+convert_encoding = OCTMIDI
+crop_length = None
+dataset: 80
+labels: 80
+Namespace(checkpoint_file='checkpoints/checkpoint_best_xai_apex_M2P_1e-6_small_tmp.pt.pt', data_dir='processed/xai_data_bin_apex_reg_cls/0', head_name='xai_head', task='xai_M2P')
+evaluating: 0.00%evaluating: 1.25%evaluating: 2.50%evaluating: 3.75%evaluating: 5.00%evaluating: 6.25%evaluating: 7.50%evaluating: 8.75%evaluating: 10.00%evaluating: 11.25%evaluating: 12.50%evaluating: 13.75%evaluating: 15.00%evaluating: 16.25%evaluating: 17.50%evaluating: 18.75%evaluating: 20.00%evaluating: 21.25%evaluating: 22.50%evaluating: 23.75%evaluating: 25.00%evaluating: 26.25%evaluating: 27.50%evaluating: 28.75%evaluating: 30.00%evaluating: 31.25%evaluating: 32.50%evaluating: 33.75%evaluating: 35.00%evaluating: 36.25%evaluating: 37.50%evaluating: 38.75%evaluating: 40.00%evaluating: 41.25%evaluating: 42.50%evaluating: 43.75%evaluating: 45.00%evaluating: 46.25%evaluating: 47.50%evaluating: 48.75%evaluating: 50.00%evaluating: 51.25%evaluating: 52.50%evaluating: 53.75%evaluating: 55.00%evaluating: 56.25%evaluating: 57.50%evaluating: 58.75%evaluating: 60.00%evaluating: 61.25%evaluating: 62.50%evaluating: 63.75%evaluating: 65.00%evaluating: 66.25%evaluating: 67.50%evaluating: 68.75%evaluating: 70.00%evaluating: 71.25%evaluating: 72.50%evaluating: 73.75%evaluating: 75.00%evaluating: 76.25%evaluating: 77.50%evaluating: 78.75%evaluating: 80.00%evaluating: 81.25%evaluating: 82.50%evaluating: 83.75%evaluating: 85.00%evaluating: 86.25%evaluating: 87.50%evaluating: 88.75%evaluating: 90.00%evaluating: 91.25%evaluating: 92.50%evaluating: 93.75%evaluating: 95.00%evaluating: 96.25%evaluating: 97.50%evaluating: 98.75%test accuracy: 32.5%
+['Stable beat', 'Long', 'Cushioned', 'Saturated (wet)', 'Clean', 'Subtle change', 'Even', 'Rich', 'Bright', 'Pure', 'Soft', 'Sophisticated(mellow)', 'balanced', 'Large range of dynamic', 'Fast paced', 'Flowing', 'Swing(Flexible)', 'Flat', 'Harmonious', 'Optimistic(pleasant)', 'HIgh Energy', 'Dominant(forceful)', 'Imaginative', 'Ethereal', 'Convincing']
+
+len labels:  25
+=========================================================================
+loading model and data
+start evaluating fold 0
+disable_cp = False
+mask_strategy = ['bar']
+convert_encoding = OCTMIDI
+crop_length = None
