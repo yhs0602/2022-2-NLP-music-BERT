@@ -172,7 +172,7 @@ class MusicBERTSentencePredictionMultilabelTaskXAI(SentencePredictionTask):
         # for param in model.parameters():
         #     param.requires_grad = False
         
-        """Freeze bottom layers from layer-0 up to layer-{freeze_up_to}.
+        """Freeze bottom layers up to layer-{freeze_up_to}.
         For base: 0 <= freeze_up_to <= 11
         For small: 0 <= freeze_up_to <= 3
         """
