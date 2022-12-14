@@ -1,5 +1,5 @@
 export PYTHONPATH=`pwd`
-export CUDA_VISIBLE_DEVICES=2
+export CUDA_VISIBLE_DEVICES=0
 #python eval_xai.py --task xai_M2PFnP --head_name xai_M2PFnP_res --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2PFnP_base_1e-5.pt.pt  --data_dir xai_data_bin_apex_reg_cls/0
 
 #python eval_xai.py --task xai_M2PF --head_name xai_head --checkpoint_file checkpoints/checkpoint_best_xai_apex_M2PF_0.00001_base_adv.pt.pt --data_dir xai_data_bin_apex_reg_cls/0

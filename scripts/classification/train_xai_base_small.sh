@@ -9,9 +9,9 @@ export CUDA_VISIBLE_DEVICES=0
 # wget https://msramllasc.blob.core.windows.net/modelrelease/checkpoint_last_musicbert_base.pt
 # cd -
 
-TOTAL_NUM_UPDATES=7000
+TOTAL_NUM_UPDATES=1000
 WARMUP_UPDATES=300
-PEAK_LRS=(1e-4 1e-5 1e-6)
+PEAK_LRS=(1e-4)
 TOKENS_PER_SAMPLE=8192
 MAX_POSITIONS=8192
 BATCH_SIZE=32
@@ -28,7 +28,7 @@ do
 
     for lr in "${PEAK_LRS[@]}"
         do
-        CHECKPOINT_SUFFIX=xai_apex_M2P_${lr}_${size}_tmp.pt
+        CHECKPOINT_SUFFIX=xai_apex_M2P_${lr}_${size}_${TOTAL_NUM_UPDATES}_${WARMUP_UPDATES}_nofreeze.pt
         fairseq-train processed/xai_data_bin_apex_reg_cls/0 --user-dir musicbert \
             --restore-file $MUSICBERT_PATH \
             --max-update $TOTAL_NUM_UPDATES \
@@ -55,6 +55,7 @@ do
             --checkpoint-suffix _${CHECKPOINT_SUFFIX} \
             --no-epoch-checkpoints \
             --maximize-best-checkpoint-metric \
-            --find-unused-parameters 
+            --find-unused-parameters \
+            --save-dir checkpoints/freeze_${size}
         done
 done

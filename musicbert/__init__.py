@@ -167,10 +167,25 @@ class MusicBERTSentencePredictionMultilabelTaskXAI(SentencePredictionTask):
         from fairseq import models
 
         model = models.build_model(args, self)
+        
+        """Freeze all base layers, only update classifier parameters"""
+        # for param in model.parameters():
+        #     param.requires_grad = False
+        
+        """Freeze bottom layers up to layer-{freeze_up_to}.
+        For base: 0 <= freeze_up_to <= 11
+        For small: 0 <= freeze_up_to <= 3
+        """
+        # freeze_up_to = 3
+        # for name, param in list(model.named_parameters()):
+            # for i in range(freeze_up_to + 1):
+            #     if f"layers.{i}." in name:
+            #         param.requires_grad = False
 
         model.register_classification_head(
             getattr(args, "classification_head_name", "sentence_classification_head"),
             num_classes=self.args.num_cls_classes,
+            inner_dim = None
         )
         if self.args.num_reg_classes > 1:
             model.register_regression_head(
@@ -966,7 +981,7 @@ class MusicBERTModel(RobertaModel):
             if not hasattr(self, "regression_heads")
             else self.regression_heads.keys()
         )
-        #print(current_head_names)
+        
         keys_to_delete = []
         for k in state_dict.keys():
             if not k.startswith(prefix + "regression_heads."):
