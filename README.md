@@ -40,4 +40,4 @@ python augmentation.py ../processed/segmented_midi/ --pitch_range=-6_12_1 --temp
 - Then run modified `python map_midi_to_label.py` to generate `midi_label_map_apex_reg_cls.json` file.
 - Then run modified `python -u gen_xai.py xai` to generate `xai_data_raw_apex_reg_cls_augmented` folder.
 - Then run modified `bash scripts/binarize_xai.sh xai` to generate `xai_data_bin_apex_reg_cls_augmented` folder.
-- Then run modified `scripts/train_xai_base_small.sh` to train the model.
+- Then run modified `scripts/classification/train_xai_base_small.sh` to train the model.
