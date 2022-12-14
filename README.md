@@ -10,7 +10,7 @@ branch: ludrex
 - You may either 
 1. freeze no parameters(default),
 2. freeze all parameters in the encoder and only update classifier parameters, or
-3. freeze parameters from layer-0 up to layer-$k$, where $$0\le k\le \text{(\# of encoder layers)}-1.$$ MusicBERT base and small models have 12 and 4 encoder layers, respectively. 
+3. fix $k$ and freeze parameters in encoder layers $0,1,\ldots,k$, where $$0\le k\le \text{(number of encoder layers)}-1.$$ MusicBERT base and small models have 12 and 4 encoder layers, respectively. 
 
 - To fine-tune,
 ```shell
