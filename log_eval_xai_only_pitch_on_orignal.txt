@@ -1,0 +1,32 @@
+len labels:  25
+=========================================================================
+loading model and data
+start evaluating fold 0
+disable_cp = False
+mask_strategy = ['bar']
+convert_encoding = OCTMIDI
+crop_length = None
+len labels:  25
+=========================================================================
+loading model and data
+start evaluating fold 0
+disable_cp = False
+mask_strategy = ['bar']
+convert_encoding = OCTMIDI
+crop_length = None
+len labels:  25
+=========================================================================
+loading model and data
+start evaluating fold 0
+disable_cp = False
+mask_strategy = ['bar']
+convert_encoding = OCTMIDI
+crop_length = None
+len labels:  25
+=========================================================================
+loading model and data
+start evaluating fold 0
+disable_cp = False
+mask_strategy = ['bar']
+convert_encoding = OCTMIDI
+crop_length = None
