@@ -981,7 +981,7 @@ class MusicBERTModel(RobertaModel):
             if not hasattr(self, "regression_heads")
             else self.regression_heads.keys()
         )
-        # print(current_head_names)
+        
         keys_to_delete = []
         for k in state_dict.keys():
             if not k.startswith(prefix + "regression_heads."):

@@ -29,7 +29,7 @@ do
     for lr in "${PEAK_LRS[@]}"
         do
         CHECKPOINT_SUFFIX=xai_apex_M2P_${lr}_${size}_${TOTAL_NUM_UPDATES}_${WARMUP_UPDATES}_nofreeze.pt
-        fairseq-train processed/xai_data_bin_apex_reg_cls/0 --fp16 --user-dir musicbert \
+        fairseq-train processed/xai_data_bin_apex_reg_cls/0 --user-dir musicbert \
             --restore-file $MUSICBERT_PATH \
             --max-update $TOTAL_NUM_UPDATES \
             --batch-size $MAX_SENTENCES --update-freq $UPDATE_FREQ \
