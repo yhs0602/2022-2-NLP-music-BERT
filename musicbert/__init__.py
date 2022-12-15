@@ -168,11 +168,11 @@ class MusicBERTSentencePredictionMultilabelTaskXAI(SentencePredictionTask):
 
         model = models.build_model(args, self)
         
-        """Freeze all base layers, only update classifier parameters"""
+        """Freeze all encoder parameters, only update classifier parameters"""
         # for param in model.parameters():
         #     param.requires_grad = False
         
-        """Freeze bottom layers up to layer-{freeze_up_to}.
+        """Freeze bottom encoder layers up to layer-{freeze_up_to}.
         For base: 0 <= freeze_up_to <= 11
         For small: 0 <= freeze_up_to <= 3
         """
